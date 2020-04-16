@@ -48,7 +48,7 @@ export default class CountryList extends React.Component {
 
   onItemClick = (item, index) => {
     const {navigate} = this.props.navigation;
-    navigate('City', {city: item});
+    navigate('City', {city: item.capital});
   };
 
   render() {
