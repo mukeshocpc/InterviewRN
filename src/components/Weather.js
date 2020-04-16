@@ -34,7 +34,7 @@ export default class Weather extends React.Component {
       this.setState({weather: repsonse.current});
     }
 
-    //console.log(repsonse.status);
+    console.log(repsonse);
   };
 
   fetchWeather = async (city) => {
@@ -43,7 +43,7 @@ export default class Weather extends React.Component {
         city,
       {},
     );
-    console.log(response.json());
+    console.log(response);
     const json = await response.json();
     return json;
   };
