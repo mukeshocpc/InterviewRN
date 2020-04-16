@@ -43,6 +43,7 @@ export default class Weather extends React.Component {
         city,
       {},
     );
+    console.log(response.json());
     const json = await response.json();
     return json;
   };

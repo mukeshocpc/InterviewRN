@@ -65,7 +65,7 @@ export default class CountryList extends React.Component {
               <TouchableHighlight
                 underlayColor="orange"
                 style={styles.itemContainer}
-                onPress={(item) => this.onItemClick(item, index)}>
+                onPress={() => this.onItemClick(item)}>
                 <>
                   <Image
                     style={{width: 100, height: 100, resizeMode: 'stretch'}}
@@ -89,11 +89,6 @@ export default class CountryList extends React.Component {
               </TouchableHighlight>
             )}
             keyExtractor={(item, index) => String(index)}
-            ListHeaderComponent={this.renderHeader}
-            ListFooterComponent={this.renderFooter}
-            onEndReached={this.retrieveMore}
-            onEndReachedThreshold={5}
-            refreshing={this.state.refreshing}
             //stickyHeaderIndices={[0]}
           />
         </SafeAreaView>
